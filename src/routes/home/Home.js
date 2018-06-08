@@ -2,8 +2,8 @@ import React from 'react'
 import { routerRedux } from 'dva/router'
 import { connect } from 'dva'
 import {Button} from 'antd'
-// import styles from './home'
-
+import styles from './home.less'
+import classnames from 'classnames'
 const Home = (props) => {
   const {user} = props.home
   const click = () => {
@@ -30,13 +30,13 @@ const Home = (props) => {
       pathname: '/login',
     }))
   }
-
+//  const classname = 
   return (
     <div>
       {user}
-      {/* <div className={styles.home} onClick={click}>change</div> */}
-      <div onClick={fetch}>fetch</div>
-      <div onClick={login}>login</div>
+      <div className={classnames(styles.home)}onClick={click}>change</div>
+      <div onClick={fetch}>fetcd</div>
+      <div onClick={login}>loddgin</div>
       <Button>fetch</Button>
     </div>
   )
